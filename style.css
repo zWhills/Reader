@@ -1,0 +1,138 @@
+:root {
+    --bg: #f3f6fb;
+    --panel: #ffffff;
+    --border: #d0d7e2;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --danger: #dc2626;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    background: var(--bg);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--text);
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: var(--panel);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.06);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(180deg, #f9fbff, #edf2fa);
+    border-bottom: 1px solid var(--border);
+    padding: 18px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.content {
+    padding: 24px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 20px;
+    background: #f8fafc;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.upload-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.upload-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+input[type="file"] {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 9px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.15s ease;
+}
+
+button:hover {
+    background: #eef4ff;
+    border-color: var(--primary);
+}
+
+button.primary {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+button.primary:hover {
+    background: var(--primary-hover);
+}
+
+button.danger:hover {
+    background: #fee2e2;
+    border-color: var(--danger);
+    color: var(--danger);
+}
+
+.notepad {
+    width: 100%;
+    background: #fcfdff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 16px;
+    height: 450px;
+    resize: vertical;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text);
+}
+
+.status {
+    margin-top: 16px;
+    padding: 10px 14px;
+    background: #f9fbff;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+    color: var(--muted);
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Log Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            BATTERY LOG VIEWER
+        </div>
+
+        <div class="content">
+            <div class="controls">
+                <div class="upload-group">
+                    <label for="logFileInput" class="upload-label">Upload Log File (.txt)</label>
+                    <input type="file" id="logFileInput" accept=".txt, .log">
+                </div>
+                <div class="button-group">
+                    <button id="loadLocalBtn" class="primary">Check Local Storage</button>
+                    <button id="clearViewBtn" class="danger">Clear Viewer</button>
+                </div>
+            </div>
+
+            <textarea id="logDisplay" class="notepad" readonly placeholder="Upload a log file or click 'Check Local Storage' to view your battery data here..."></textarea>
+            
+            <div class="status" id="viewerStatus">
+                Ready. Waiting for log data.
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
